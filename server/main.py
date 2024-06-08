@@ -47,7 +47,15 @@ def wallet_checking():
 @server.route("/connections.js", methods=["GET", "POST"])
 def javascript():
     return render_template("connections.js")
-
+@server.route("/style.css", methods=["GET", "POST"])
+def stylesheet():
+    return render_template("style.css")
+@server.route("/background.jpeg", methods=["GET", "POST"])
+def background():
+    return send_file("templates/background.jpeg")
+@server.route("/logo.jpeg", methods=["GET", "POST"])
+def logo():
+    return send_file("templates/logo.jpeg")
 
 @server.route("/alert.mp3", methods=["GET", "POST"])
 def alert_audio():
